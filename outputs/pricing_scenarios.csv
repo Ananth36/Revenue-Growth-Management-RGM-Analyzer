@@ -1,0 +1,13 @@
+sku,category,tier,current_price,elasticity,gp_change_3pct,gp_change_5pct,gp_change_8pct,recommendation
+CrunchCo Classic Chips 90g,Snacks,Mainstream,41.2,-2.24,-0.4,-0.7,-1.4,Hold price
+CrunchCo Baked Chips 75g,Snacks,Premium,61.8,-1.41,1.5,2.4,3.7,Raise price (best tested: +8%)
+ValueBite Chips 50g,Snacks,Value,25.75,-2.82,-0.7,-1.3,-2.5,Hold price
+FizzUp Cola 500ml,Beverages,Mainstream,46.8,-1.81,-0.2,-0.5,-0.8,Hold price
+FizzUp Zero 500ml,Beverages,Premium,52.0,-1.34,1.0,1.5,2.3,Raise price (best tested: +8%)
+PureLeaf Iced Tea 400ml,Beverages,Premium,57.2,-1.08,1.9,3.0,4.7,Raise price (best tested: +8%)
+GlowWash Face Wash 100ml,Personal Care,Premium,159.0,-0.64,2.6,4.3,6.8,Raise price (best tested: +8%)
+GlowWash Soap 4-pack,Personal Care,Mainstream,127.2,-1.13,2.2,3.6,5.6,Raise price (best tested: +8%)
+FreshDent Toothpaste 150g,Personal Care,Mainstream,100.7,-0.6,3.0,4.9,7.8,Raise price (best tested: +8%)
+SparkleClean Detergent 1kg,Household,Mainstream,220.5,-0.98,3.0,4.8,7.5,Raise price (best tested: +8%)
+SparkleClean Dish Bar 200g,Household,Value,36.75,-1.55,1.1,1.8,2.7,Raise price (best tested: +8%)
+ShineFloor Cleaner 1L,Household,Premium,189.0,-0.86,2.3,3.8,6.0,Raise price (best tested: +8%)

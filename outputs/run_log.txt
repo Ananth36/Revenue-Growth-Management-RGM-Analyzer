@@ -1,0 +1,77 @@
+
+====================================================================================================
+1. PROMO ROI BY MECHANIC
+====================================================================================================
+promo_type  events  promo_spend  incremental_gp  roi  
+----------  ------  -----------  --------------  -----
+DISPLAY        635      594,139         663,330   1.12
+TPR          1,055    1,113,361        -374,536  -0.34
+DEEP           652    1,775,684        -635,814  -0.36
+
+Worst 5 SKU x promo combinations (cut these first):
+sku                         promo_type  uplift_pct  promo_spend  incremental_gp  roi  
+--------------------------  ----------  ----------  -----------  --------------  -----
+FreshDent Toothpaste 150g   TPR                9.3       95,810         -62,366  -0.65
+GlowWash Face Wash 100ml    TPR               10.2       79,755         -48,610  -0.61
+FreshDent Toothpaste 150g   DEEP                25      141,426         -83,622  -0.59
+ShineFloor Cleaner 1L       DEEP              31.5      134,719         -70,954  -0.53
+SparkleClean Detergent 1kg  DEEP              40.1      274,047        -146,386  -0.53
+
+Best 5 SKU x promo combinations (scale these):
+sku                         promo_type  uplift_pct  promo_spend  incremental_gp  roi 
+--------------------------  ----------  ----------  -----------  --------------  ----
+FizzUp Cola 500ml           DISPLAY           79.1       68,617         101,943  1.49
+FizzUp Zero 500ml           DISPLAY           64.7       36,666          47,927  1.31
+PureLeaf Iced Tea 400ml     DISPLAY           65.6       39,832          50,748  1.27
+ShineFloor Cleaner 1L       DISPLAY           60.4       51,615          63,104  1.22
+SparkleClean Dish Bar 200g  DISPLAY           78.3       39,485          47,170  1.19
+
+====================================================================================================
+2. PRICE ELASTICITY (estimated in SQL vs true simulated value)
+====================================================================================================
+sku                         category       elasticity  std_error  true_elasticity
+--------------------------  -------------  ----------  ---------  ---------------
+CrunchCo Classic Chips 90g  Snacks              -2.24       0.05             -2.2
+CrunchCo Baked Chips 75g    Snacks              -1.41       0.04             -1.4
+ValueBite Chips 50g         Snacks              -2.82       0.04             -2.8
+FizzUp Cola 500ml           Beverages           -1.81       0.04             -1.8
+FizzUp Zero 500ml           Beverages           -1.34       0.04             -1.3
+PureLeaf Iced Tea 400ml     Beverages           -1.08       0.04             -1.1
+GlowWash Face Wash 100ml    Personal Care       -0.64       0.04             -0.7
+GlowWash Soap 4-pack        Personal Care       -1.13       0.04             -1.2
+FreshDent Toothpaste 150g   Personal Care        -0.6       0.04             -0.6
+SparkleClean Detergent 1kg  Household           -0.98       0.04             -0.9
+SparkleClean Dish Bar 200g  Household           -1.55       0.04             -1.6
+ShineFloor Cleaner 1L       Household           -0.86       0.04             -0.8
+
+Mean absolute error vs truth: 0.038  (model validation)
+
+====================================================================================================
+3. PRICING HEADROOM (% change in gross profit for a list-price increase)
+====================================================================================================
+sku                         category       tier        current_price  elasticity  gp_change_3pct  gp_change_5pct  gp_change_8pct  recommendation                
+--------------------------  -------------  ----------  -------------  ----------  --------------  --------------  --------------  ------------------------------
+CrunchCo Classic Chips 90g  Snacks         Mainstream           41.2       -2.24            -0.4            -0.7            -1.4  Hold price                    
+CrunchCo Baked Chips 75g    Snacks         Premium              61.8       -1.41             1.5             2.4             3.7  Raise price (best tested: +8%)
+ValueBite Chips 50g         Snacks         Value               25.75       -2.82            -0.7            -1.3            -2.5  Hold price                    
+FizzUp Cola 500ml           Beverages      Mainstream           46.8       -1.81            -0.2            -0.5            -0.8  Hold price                    
+FizzUp Zero 500ml           Beverages      Premium                52       -1.34               1             1.5             2.3  Raise price (best tested: +8%)
+PureLeaf Iced Tea 400ml     Beverages      Premium              57.2       -1.08             1.9               3             4.7  Raise price (best tested: +8%)
+GlowWash Face Wash 100ml    Personal Care  Premium               159       -0.64             2.6             4.3             6.8  Raise price (best tested: +8%)
+GlowWash Soap 4-pack        Personal Care  Mainstream          127.2       -1.13             2.2             3.6             5.6  Raise price (best tested: +8%)
+FreshDent Toothpaste 150g   Personal Care  Mainstream          100.7        -0.6               3             4.9             7.8  Raise price (best tested: +8%)
+SparkleClean Detergent 1kg  Household      Mainstream          220.5       -0.98               3             4.8             7.5  Raise price (best tested: +8%)
+SparkleClean Dish Bar 200g  Household      Value               36.75       -1.55             1.1             1.8             2.7  Raise price (best tested: +8%)
+ShineFloor Cleaner 1L       Household      Premium               189       -0.86             2.3             3.8               6  Raise price (best tested: +8%)
+
+====================================================================================================
+4. REVENUE BRIDGE FY25 -> FY26 (INR)
+====================================================================================================
+  revenue_fy25      43,547,313.0
+  volume_effect     -1,772,000.0
+  mix_effect         1,080,378.0
+  price_effect       2,021,127.0
+  revenue_fy26      44,876,818.0
+  growth_pct                 3.1
+
+Outputs written to /home/claude/rgm-analyzer/outputs/  (open rgm_report.html in a browser)

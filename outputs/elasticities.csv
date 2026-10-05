@@ -1,0 +1,13 @@
+product_id,sku,category,elasticity,std_error,true_elasticity
+1,CrunchCo Classic Chips 90g,Snacks,-2.24,0.049,-2.2
+2,CrunchCo Baked Chips 75g,Snacks,-1.41,0.044,-1.4
+3,ValueBite Chips 50g,Snacks,-2.82,0.044,-2.8
+4,FizzUp Cola 500ml,Beverages,-1.81,0.039,-1.8
+5,FizzUp Zero 500ml,Beverages,-1.34,0.043,-1.3
+6,PureLeaf Iced Tea 400ml,Beverages,-1.08,0.045,-1.1
+7,GlowWash Face Wash 100ml,Personal Care,-0.64,0.044,-0.7
+8,GlowWash Soap 4-pack,Personal Care,-1.13,0.045,-1.2
+9,FreshDent Toothpaste 150g,Personal Care,-0.6,0.043,-0.6
+10,SparkleClean Detergent 1kg,Household,-0.98,0.044,-0.9
+11,SparkleClean Dish Bar 200g,Household,-1.55,0.045,-1.6
+12,ShineFloor Cleaner 1L,Household,-0.86,0.045,-0.8
